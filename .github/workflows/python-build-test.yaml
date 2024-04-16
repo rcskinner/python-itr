@@ -8,6 +8,7 @@ env:
   DD_SITE: datadoghq.com
   DD_ENV: ci 
   DD_SERVICE: python-itr pytest
+  DD_API_KEY: ${{secrets.DD_API_KEY}}
 
 on:
   push:
