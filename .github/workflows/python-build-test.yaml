@@ -3,6 +3,12 @@
 
 name: Test and build Python Application
 
+env: 
+  DD_CIVISIBILITY_AGENTLESS_ENABLED: true
+  DD_SITE: datadoghq.com
+  DD_ENV: ci 
+  DD_SERVICE: python-itr pytest
+
 on:
   push:
     branches: [ "main" ]
