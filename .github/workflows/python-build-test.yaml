@@ -42,4 +42,6 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest --ddtrace
+        DD_CIVISIBILITY_AGENTLESS_ENABLED=true DD_API_KEY=$DD_API_KEY \
+        DD_SITE=datadoghq.com \
+        DD_ENV=ci DD_SERVICE=python-itr pytest --ddtrace
