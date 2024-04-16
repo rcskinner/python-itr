@@ -44,5 +44,5 @@ jobs:
       env:
         DD_API_KEY: ${{ secrets.DD_API_KEY }}
       run: |
-        echo DD_API_KEY
+        echo $DD_API_KEY
         pytest --ddtrace
