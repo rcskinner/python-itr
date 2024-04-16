@@ -8,7 +8,7 @@ env:
   DD_SITE: datadoghq.com
   DD_ENV: ci 
   DD_SERVICE: python-itr pytest
-
+  DD_API_KEY: $DD_API_KEY
 on:
   push:
     branches: [ "main" ]
@@ -41,8 +41,5 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
-      env:
-        DD_API_KEY: ${{ secrets.DD_API_KEY }}
       run: |
-        echo $DD_API_KEY
         pytest --ddtrace
