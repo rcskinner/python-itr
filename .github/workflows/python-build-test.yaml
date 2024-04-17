@@ -9,11 +9,6 @@ env:
   DD_ENV: ci 
   DD_SERVICE: python-itr pytest
   DD_API_KEY: ${{vars.DD_API_KEY}}
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 permissions:
   contents: read
