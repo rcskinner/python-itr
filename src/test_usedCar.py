@@ -9,7 +9,7 @@ class TestusedCarInit(unittest.TestCase):
         self.assertEqual(car.make, "Toyota")
     
     def test_model(self): 
-        self.assertEqual(car.model, "Toyota")
+        self.assertEqual(car.model, "Tacoma")
 
     def test_year(self): 
         self.assertEqual(car.year, 1997)
