@@ -9,11 +9,8 @@ env:
   DD_ENV: ci 
   DD_SERVICE: python-itr pytest
   DD_API_KEY: ${{vars.DD_API_KEY}}
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+
+on:  push
 
 permissions:
   contents: read
@@ -32,7 +29,8 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 pytest ddtrace
+        pip install flake8 ddtrace coverage
+        pip install pytest==7.0.0
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
