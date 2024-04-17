@@ -1,5 +1,5 @@
 import random 
-from src.main import myPet
+from src.myPet import myPet
 
 maggie = myPet(name="Maggie",
                species="Dog",
