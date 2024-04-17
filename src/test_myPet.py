@@ -7,6 +7,13 @@ maggie = myPet(name="Maggie",
                age=0.5,
                is_good=True)
 
+mir = myPet(name = "Mir",
+            species="Cat",
+            breed="Manx",
+            age=13,
+            is_good=False
+            )
+
 def test_name():
     assert maggie.name == "Maggie"
 
@@ -21,3 +28,7 @@ def test_age():
 
 def test_is_good(): 
     assert maggie.is_good == True
+
+def test_has_tail(): 
+    """Testing the has_tail method on the myPet object"""
+    assert mir.has_tail() == False
