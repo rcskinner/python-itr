@@ -14,9 +14,3 @@ def test_year():
 
 def test_mileage(): 
     assert car.mileage == 300E3
-
-def test_flaky_mileage(): 
-    r = random.random()
-    if r > 0.5: 
-        car.mileage = 20E3 
-    assert car.mileage == 300E3 
