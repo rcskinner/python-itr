@@ -24,6 +24,13 @@ class myPet():
     
     def age_in_months(self): 
         return 12*self.age
+    
+    def can_swim(self): 
+        """Testing if the pet can swim or not. PWD's can swim, Manx cats cant"""
+        can_swim = False 
+        if self.breed == "PWD": 
+            can_swim = True
+        return can_swim
 
 if __name__ == 'main': 
     print ("Hello, World!")

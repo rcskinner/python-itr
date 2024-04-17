@@ -36,3 +36,9 @@ def test_has_tail():
 def test_age_in_months(): 
     """Testing the age in motnhs method on the myPet object"""
     assert mir.age_in_months() == 12*13
+
+def test_can_swim_true(): 
+    assert maggie.can_swim() == True 
+
+def test_can_swim_false(): 
+    assert mir.can_swim == False
