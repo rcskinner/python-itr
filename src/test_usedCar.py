@@ -1,7 +1,7 @@
 import unittest
 from src.main import usedCar
 
-car = usedCar("Toyota", "Tacoma", 1997, 300E3)
+car = usedCar("Toyota", "Tacoma", 1997, 300E3, 20, 20)
 
 class TestusedCarInit(unittest.TestCase): 
 
@@ -16,3 +16,8 @@ class TestusedCarInit(unittest.TestCase):
     
     def test_mileage(self): 
         self.assertEqual(car.mileage, 300E3)
+
+class TestusedCarMethods(unittest.TestCase): 
+
+    def test_range_calculation(self):
+        self.assertEqual(car.calculate_range(),20*20)
