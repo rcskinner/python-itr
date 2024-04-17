@@ -41,4 +41,4 @@ def test_can_swim_true():
     assert maggie.can_swim() == True 
 
 def test_can_swim_false(): 
-    assert mir.can_swim == False
+    assert mir.can_swim() == False
