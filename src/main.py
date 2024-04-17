@@ -21,6 +21,9 @@ class myPet():
         if self.breed == "Manx": 
             has_tail = False
         return has_tail
+    
+    def age_in_months(self): 
+        return 12*self.age
 
 if __name__ == 'main': 
     print ("Hello, World!")

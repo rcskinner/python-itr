@@ -32,3 +32,7 @@ def test_is_good():
 def test_has_tail(): 
     """Testing the has_tail method on the myPet object"""
     assert mir.has_tail() == False
+
+def test_age_in_months(): 
+    """Testing the age in motnhs method on the myPet object"""
+    assert mir.age_in_months() == 12*13
