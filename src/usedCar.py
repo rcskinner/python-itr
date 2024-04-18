@@ -11,4 +11,8 @@ class usedCar():
         range = self.capacity * self.mpg
         return range
 
+    def calculate_size(self): 
+        if self.model == "Tacoma": 
+            size = "M"
+        return size
 
