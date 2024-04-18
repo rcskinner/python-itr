@@ -11,10 +11,7 @@ class usedCar():
     def calculate_range(self): 
         range = self.capacity * self.mpg
         return range
-    
-    def gallons_used(self): 
-        gal_used = self.mileage / self.mpg
-        return gal_used
+
 
 
 if __name__ == 'main': 
