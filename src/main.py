@@ -12,8 +12,9 @@ class usedCar():
         range = self.capacity * self.mpg
         return range
     
-    def calculate_something(self): 
-        return 42
+    def miles_per_year(self): 
+        mi_per_year = self.mileage / (2024 - self.year)
+        return mi_per_year
 
 
 if __name__ == 'main': 
