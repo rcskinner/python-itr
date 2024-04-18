@@ -28,6 +28,9 @@ class TestmyPetMethods(unittest.TestCase):
     
     def test_can_swim_false(self):
         self.assertEqual(mir.can_swim(), False)
+    
+    def test_vocalization(self):
+        self.assertEqual(maggie.vocalize(), "BARK")
 
 class TestmyPetInit(unittest.TestCase):
 

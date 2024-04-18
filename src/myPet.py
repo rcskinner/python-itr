@@ -23,3 +23,11 @@ class myPet():
         if self.breed == "PWD": 
             can_swim = True
         return can_swim
+
+    def vocalize(self): 
+        """Make the pet talk"""
+        vocalization = ''
+        if self.species == "Dog": 
+            vocalization = "BARK"
+        
+        return vocalization
