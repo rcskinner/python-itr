@@ -7,7 +7,7 @@ env:
   DD_CIVISIBILITY_AGENTLESS_ENABLED: true
   DD_SITE: datadoghq.com
   DD_ENV: ci 
-  DD_SERVICE: python-itr pytest
+  DD_SERVICE: python-itr_pytest
   DD_API_KEY: ${{vars.DD_API_KEY}}
 
 on:  push
