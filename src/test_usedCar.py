@@ -1,5 +1,5 @@
 import unittest
-from src.main import usedCar
+from src.usedCar import usedCar
 
 car = usedCar("Toyota", "Tacoma", 1997, 300E3, 20, 20)
 

@@ -1,4 +1,3 @@
-
 class usedCar(): 
     def __init__(self, make, model,year,mileage, mpg, capacity):
         self.make = make 
@@ -13,6 +12,3 @@ class usedCar():
         return range
 
 
-
-if __name__ == 'main': 
-    print ("Hello, World!")
