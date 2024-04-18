@@ -11,6 +11,9 @@ class usedCar():
     def calculate_range(self): 
         range = self.capacity * self.mpg
         return range
+    
+    def calculate_something(self): 
+        return 42
 
 
 if __name__ == 'main': 
