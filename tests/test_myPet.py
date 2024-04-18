@@ -32,6 +32,9 @@ class TestmyPetMethods(unittest.TestCase):
     def test_vocalization(self):
         self.assertEqual(maggie.vocalize(), "BARK")
 
+    def test_cat_vocalizations(self): 
+        self.assertEqual(mir.vocalize(),"meow")
+
 class TestmyPetInit(unittest.TestCase):
 
     def test_name(self):

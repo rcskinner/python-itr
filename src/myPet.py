@@ -30,4 +30,6 @@ class myPet():
         if self.species == "Dog": 
             vocalization = "BARK"
         
+        if self.species == "Cat":
+            vocalization = "meow"
         return vocalization
