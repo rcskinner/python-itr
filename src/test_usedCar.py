@@ -22,5 +22,5 @@ class TestusedCarMethods(unittest.TestCase):
     def test_range_calculation(self):
         self.assertEqual(car.calculate_range(),20*20)
     
-    def test_miles_per_year(self):
-        self.assertEqual(car.miles_per_year, car.mileage/(2024-car.year))
+    def test_gal_used(self):
+        self.assertEqual(car.gallons_used(), car.mileage / car.mpg)
