@@ -15,4 +15,9 @@ class usedCar():
         if self.model == "Tacoma": 
             size = "M"
         return size
+    
+    def can_offroad(self): 
+        if self.model == "Tacoma":
+            offroads = True
+        return offroads
 
