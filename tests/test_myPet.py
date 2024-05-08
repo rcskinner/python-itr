@@ -34,6 +34,12 @@ class TestmyPetMethods(unittest.TestCase):
 
     def test_cat_vocalizations(self): 
         self.assertEqual(mir.vocalize(),"meow")
+    
+    def test_pet_energy_level(self): 
+        self.assertEqual(maggie.check_energy_level(), "CRAZY")
+    
+    def test_mir_energy_level(self): 
+        self.assertEqual(mir.check_energy_level(), "lazy")
 
 class TestmyPetInit(unittest.TestCase):
 

@@ -33,3 +33,12 @@ class myPet():
         if self.species == "Cat":
             vocalization = "meow"
         return vocalization
+    
+    def check_energy_level(self): 
+        """See if the dog is overly hyper or not"""
+        energy_level = "lazy"
+        if self.species == "Cat": 
+            energy_level = "lazy"
+        if self.species == "Dog": 
+            energy_level = "CRAZY"
+        return energy_level
