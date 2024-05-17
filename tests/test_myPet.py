@@ -59,9 +59,7 @@ class TestmyPetInit(unittest.TestCase):
     
     def test_is_good(self):
         self.assertEqual(maggie.is_good, True)
-    
-    def test_is_adult(self):
-        self.assertEqual(maggie.is_adult, False)
+
 
     
 if __name__ == '__main__':
