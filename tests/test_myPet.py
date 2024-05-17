@@ -6,13 +6,15 @@ maggie = myPet(name="Maggie",
                species="Dog",
                breed="PWD",
                age=0.5,
-               is_good=True)
+               is_good=True,
+               is_adult=False)
 
 mir = myPet(name = "Mir",
             species="Cat",
             breed="Manx",
             age=13,
-            is_good=False
+            is_good=False, 
+            is_adult=True
             )
 
 class TestmyPetMethods(unittest.TestCase):
@@ -57,6 +59,10 @@ class TestmyPetInit(unittest.TestCase):
     
     def test_is_good(self):
         self.assertEqual(maggie.is_good, True)
+    
+    def test_is_adult(self):
+        self.assertEqual(maggie.is_adult, False)
+
     
 if __name__ == '__main__':
     unittest.main()
