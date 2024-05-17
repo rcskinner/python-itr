@@ -1,11 +1,12 @@
 class myPet():
-    def __init__(self, name, species, breed, age, is_good,):
+    def __init__(self, name, species, breed, age, is_good, is_adult):
         """Initialization for the myPet Class"""
         self.name = name
         self.species = species
         self.breed  = breed
         self.age = age
         self.is_good = is_good
+        self.is_adult = is_adult
 
 
     def has_tail(self): 
