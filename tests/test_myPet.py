@@ -6,13 +6,15 @@ maggie = myPet(name="Maggie",
                species="Dog",
                breed="PWD",
                age=0.5,
-               is_good=True)
+               is_good=True,
+               is_adult=False)
 
 mir = myPet(name = "Mir",
             species="Cat",
             breed="Manx",
             age=13,
-            is_good=False
+            is_good=False, 
+            is_adult=True
             )
 
 class TestmyPetMethods(unittest.TestCase):
@@ -28,6 +30,18 @@ class TestmyPetMethods(unittest.TestCase):
     
     def test_can_swim_false(self):
         self.assertEqual(mir.can_swim(), False)
+    
+    def test_vocalization(self):
+        self.assertEqual(maggie.vocalize(), "BARK")
+
+    def test_cat_vocalizations(self): 
+        self.assertEqual(mir.vocalize(),"meow")
+    
+    def test_pet_energy_level(self): 
+        self.assertEqual(maggie.check_energy_level(), "CRAZY")
+    
+    def test_mir_energy_level(self): 
+        self.assertEqual(mir.check_energy_level(), "lazy")
 
 class TestmyPetInit(unittest.TestCase):
 
@@ -45,6 +59,10 @@ class TestmyPetInit(unittest.TestCase):
     
     def test_is_good(self):
         self.assertEqual(maggie.is_good, True)
+
+    def test_is_maggie_adult(self): 
+        self.assertEqual(maggie.is_adult, False)
+
     
 if __name__ == '__main__':
     unittest.main()

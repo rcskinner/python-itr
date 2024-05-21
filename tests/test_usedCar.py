@@ -21,3 +21,9 @@ class TestusedCarMethods(unittest.TestCase):
 
     def test_range_calculation(self):
         self.assertEqual(car.calculate_range(),20*20)
+
+    def test_size_method(self):
+        self.assertEqual(car.calculate_size(),"M")
+
+    def test_can_offroad(self): 
+        self.assertEqual(car.can_offroad(), True)

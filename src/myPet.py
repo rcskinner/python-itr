@@ -1,10 +1,13 @@
 class myPet():
-    def __init__(self, name, species, breed, age, is_good): 
+    def __init__(self, name, species, breed, age, is_good, is_adult):
+        """Initialization for the myPet Class"""
         self.name = name
         self.species = species
         self.breed  = breed
         self.age = age
         self.is_good = is_good
+        self.is_adult = is_adult
+
 
     def has_tail(self): 
         """Function to check the myPet object to determine if the 
@@ -23,3 +26,22 @@ class myPet():
         if self.breed == "PWD": 
             can_swim = True
         return can_swim
+
+    def vocalize(self): 
+        """Make the pet talk"""
+        vocalization = ''
+        if self.species == "Dog": 
+            vocalization = "BARK"
+        
+        if self.species == "Cat":
+            vocalization = "meow"
+        return vocalization
+    
+    def check_energy_level(self): 
+        """See if the dog is overly hyper or not"""
+        energy_level = "lazy"
+        if self.species == "Cat": 
+            energy_level = "lazy"
+        if self.species == "Dog": 
+            energy_level = "CRAZY"
+        return energy_level
