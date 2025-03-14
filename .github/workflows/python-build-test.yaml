@@ -3,6 +3,12 @@
 
 name: Test and build Python Application
 
+env: 
+  DD_CIVISIBILITY_AGENTLESS_ENABLED: true
+  DD_SITE: datadoghq.com
+  DD_ENV: ci 
+  DD_SERVICE: python-itr
+  DD_API_KEY: ${{vars.DD_API_KEY}}
 on:  push
 
 permissions:
@@ -24,7 +30,7 @@ jobs:
         # Installing Python package manager (pip)
         python -m pip install --upgrade pip
         # Installing required dependencies for the GithubActions workflow
-        pip install flake8 coverage
+        pip install flake8 ddtrace coverage
         pip install pytest==7.0.0
         # Installing required dependencies if applicable
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
@@ -36,4 +42,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        python -m pytest 
+        python -m pytest --ddtrace
