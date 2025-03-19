@@ -43,5 +43,5 @@ class myPet():
         if self.species == "Cat": 
             energy_level = "lazy"
         if self.species == "Dog": 
-            energy_level = "CRAZY"
+            energy_level = "Getting better"
         return energy_level
