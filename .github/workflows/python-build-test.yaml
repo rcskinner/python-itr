@@ -9,6 +9,7 @@ env:
   DD_ENV: ci 
   DD_SERVICE: python-itr
   DD_API_KEY: ${{vars.DD_API_KEY}}
+  DD_TAGS: test_tag:A,department:the-skinner-department
 on:  push
 
 permissions:
